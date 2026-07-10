@@ -1,0 +1,26 @@
+owner: nextpdf-labs
+repo: status
+
+sites:
+  - name: Marketing Site
+    url: https://getnextpdf.com
+  - name: Documentation
+    url: https://nextpdf.dev/docs/
+  - name: License Activation Service
+    url: https://app.getnextpdf.com/api/license/jwks
+    expectedStatusCodes:
+      - 200
+    __dangerous__body_down_if_text_missing: '"keys"'
+  - name: Customer Portal
+    url: https://app.getnextpdf.com
+
+status-website:
+  cname: status.getnextpdf.com
+  name: NextPDF Status
+  introTitle: "**NextPDF** service status"
+  introMessage: Live uptime monitoring and incident history for NextPDF public services, powered by real-time data from this repository.
+  navbar:
+    - title: Status
+      href: /
+    - title: NextPDF
+      href: https://getnextpdf.com
